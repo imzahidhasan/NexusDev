@@ -68,7 +68,9 @@ async function getAllPosts() {
         `;
 
     getById("all-posts-section").appendChild(div);
-    loadingScreen(false);
+    setTimeout(() => {
+      loadingScreen(false);
+    }, 2000);
   });
 }
 getAllPosts();
@@ -119,7 +121,9 @@ const getLatestPost = async () => {
     `;
     getById("latestPostContainer").appendChild(div);
   });
-  loadingScreen2(false);
+  setTimeout(() => {
+    loadingScreen2(false);
+  }, 2000);
 };
 getLatestPost();
 
@@ -194,7 +198,9 @@ async function getDataByCategory(category) {
             </div>
         `;
     getById("all-posts-section").appendChild(div);
-    loadingScreen(false);
+    setTimeout(() => {
+      loadingScreen(false);
+    }, 2000);
   });
 }
 

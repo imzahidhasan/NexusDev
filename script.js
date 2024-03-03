@@ -42,15 +42,16 @@ async function getAllPosts() {
                     <div class="flex justify-between gap-4 items-center md:p-2">
                         <div>
                             <div class="flex gap-7 ">
-                                <i class="fa-regular fa-message">   ${
-                                  post?.comment_count
-                                }</i>
-                                <i class="fa-regular fa-eye">   ${
+                                  <h1><i class="fa-regular fa-message"></i> ${
+                                    post?.view_count
+                                  }</h1>
+                                <h1><i class="fa-regular fa-eye"></i> ${
                                   post?.view_count
-                                }</i>
-                                <i class="fa-regular fa-clock">   ${
-                                  post?.posted_time
-                                } min</i>
+                                }</h1>
+                                
+                                   <h1><i class="fa-regular fa-clock"></i> ${
+                                     post?.posted_time
+                                   } min </h1>
                             </div>
                         </div>
                         <div class="text-3xl text-green-600 mb-2">
@@ -137,7 +138,7 @@ async function getDataByCategory(category) {
     console.log(post);
     const div = document.createElement("div");
     div.classList = "bg-[#797dfc31] rounded-xl";
-    div.innerHTML = `
+   div.innerHTML = `
                 <div class=" flex rounded-xl mb-4">
                 <div class="w-[20%]  flex pt-10 justify-center ">
                     <div class="relative">
@@ -168,15 +169,16 @@ async function getDataByCategory(category) {
                     <div class="flex justify-between gap-4 items-center md:p-2">
                         <div>
                             <div class="flex gap-7 ">
-                                <i class="fa-regular fa-message">   ${
-                                  post?.comment_count
-                                }</i>
-                                <i class="fa-regular fa-eye">   ${
+                                  <h1><i class="fa-regular fa-message"></i> ${
+                                    post?.view_count
+                                  }</h1>
+                                <h1><i class="fa-regular fa-eye"></i> ${
                                   post?.view_count
-                                }</i>
-                                <i class="fa-regular fa-clock">   ${
-                                  post?.posted_time
-                                } min</i>
+                                }</h1>
+                                
+                                   <h1><i class="fa-regular fa-clock"></i> ${
+                                     post?.posted_time
+                                   } min </h1>
                             </div>
                         </div>
                         <div class="text-3xl text-green-600 mb-2">

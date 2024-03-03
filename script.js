@@ -84,9 +84,32 @@ const getLatestPost = async () => {
   data.forEach(post => {
     const div = document.createElement('div')
     div.innerHTML = `
-    
-    
-    `
+     <div class="card w-96 bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                    <img src="${post?.cover_image}" alt="Shoes"
+                        class="rounded-xl" />
+                </figure>
+                <div class="card-body pl-9">
+                    <p><i class="fa-solid fa-calendar-days"></i> ${
+                      post?.author?.posted_date || "No publish date"
+                    }</p>
+                    <h2${post.title}</h2>
+                    <p>${post?.description}</p>
+                    <div class="flex items-center gap-4">
+                        <div class="avatar">
+                            <div class="w-16 rounded-full">
+                                <img src="${post?.profile_image}" />
+                            </div>
+                        </div>
+                        <div>
+                            <h1>${post?.author?.name}</h1>
+                            <p>${post?.author?.designation || "Unknown"}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    `;
+    getById("latestPostContainer").appendChild(div)
   })
 
 }
